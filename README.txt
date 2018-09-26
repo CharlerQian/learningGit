@@ -7,3 +7,5 @@ It can check which part of the project have been changed
 RollBack README
 
 The Working Directory and Swap Region
+
+Change-Add-Change-Commit
