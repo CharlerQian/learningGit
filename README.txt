@@ -13,3 +13,5 @@ Change-Add-Change-Commit
 A New Line Add
 
 Another Line Add
+
+Change the name of remote repository
