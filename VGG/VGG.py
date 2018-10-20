@@ -110,6 +110,7 @@ if __name__ == '__main__':
             label = tf.placeholder(tf.float32,[None])
             inference_output,params,fc3 = inference_VGG(img)
             loss = loss_vgg(inference_output,label)
+            train_op = train(loss)
             print(dir(loss.graph))
             tf.global_variables_initializer().run()
             img_data = Image.open('./demo.jpg')
@@ -122,7 +123,6 @@ if __name__ == '__main__':
                 print(i)
                 #res_out= sess.run([inference_output,params,fc3],feed_dict={img:img_data})
                 #loss_output = sess.run([loss],feed_dict={inference_output:res_out[0],label:labels_data})
-                train_op = train(loss)
                 sess.run(train_op,feed_dict={img:img_data,label:labels_data})
                 #print(loss_output)            '''
         
